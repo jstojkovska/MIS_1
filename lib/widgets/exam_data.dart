@@ -16,7 +16,7 @@ class ExamData extends StatelessWidget {
     final isPast = exam.timeOfTheExam.isBefore(now);
     final color = isPast ? Colors.red : Colors.green;
 
-    final difference = exam.timeOfTheExam.difference(now);
+    final difference = exam.timeOfTheExam.toLocal().difference(now.toLocal());
     final days = difference.inDays;
     final hours = difference.inHours % 24;
 

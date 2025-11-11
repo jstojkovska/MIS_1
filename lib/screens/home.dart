@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
   );
   Exam exam12 = new Exam(
     nameExam: "Бизнис статистика",
-    timeOfTheExam: DateTime(2026, 01, 14, 14, 00),
+    timeOfTheExam: DateTime(2026, 01, 14, 14, 50),
     labsExam: List.of({"225", "138", "3"}),
   );
 

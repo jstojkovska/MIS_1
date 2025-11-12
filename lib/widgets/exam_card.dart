@@ -64,7 +64,7 @@ class ExamCard extends StatelessWidget {
                   Text(exam.labsExam.join(", ")),
                 ],
               ),
-              const Spacer(),
+              SizedBox(height: 8),
               Align(
                 alignment: Alignment.bottomRight,
                 child: Container(

@@ -15,17 +15,14 @@ class ExamGrid extends StatefulWidget {
 class _ExamGridState extends State<ExamGrid> {
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: 7,
-        crossAxisSpacing: 7,
-        childAspectRatio: 250 / 280,
-      ),
+    return ListView.builder(
       itemCount: widget.examList.length,
-      physics: BouncingScrollPhysics(),
       itemBuilder: (context, index) {
-        return ExamCard(exam: widget.examList[index]);
+        final exam = widget.examList[index];
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 8.0),
+          child: ExamCard(exam: exam),
+        );
       },
     );
   }
